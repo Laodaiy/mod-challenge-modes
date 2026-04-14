@@ -414,7 +414,7 @@ public:
             return;
         }
         player->KillPlayer();
-        player->GetSession()->KickPlayer(std::string("极限模式角色已死亡"));
+        player->GetSession()->KickPlayer(std::string("硬核模式角色已死亡"));
     }
 
     void OnPlayerReleasedGhost(Player* player) override
@@ -424,7 +424,7 @@ public:
             return;
         }
         player->UpdatePlayerSetting("mod-challenge-modes", HARDCORE_DEAD, 1);
-        player->GetSession()->KickPlayer(std::string("极限模式角色已死亡"));
+        player->GetSession()->KickPlayer(std::string("硬核模式角色已死亡"));
     }
 
     void OnPlayerPVPKill(Player* /*killer*/, Player* killed) override
@@ -454,7 +454,7 @@ public:
         // A better implementation is to not allow the resurrect but this will need a new hook added first
         player->UpdatePlayerSetting("mod-challenge-modes", HARDCORE_DEAD, 1);
         player->KillPlayer();
-        player->GetSession()->KickPlayer(std::string("极限模式角色已死亡"));
+        player->GetSession()->KickPlayer(std::string("硬核模式角色已死亡"));
     }
 
     void OnPlayerGiveXP(Player* player, uint32& amount, Unit* victim, uint8 xpSource) override
@@ -797,11 +797,11 @@ public:
     {
         if (sChallengeModes->challengeEnabled(SETTING_HARDCORE) && !playerSettingEnabled(player, SETTING_HARDCORE) && !playerSettingEnabled(player, SETTING_SEMI_HARDCORE))
         {
-            AddGossipItemFor(player, GOSSIP_ICON_CHAT, "启用极限模式", 0, SETTING_HARDCORE);
+            AddGossipItemFor(player, GOSSIP_ICON_CHAT, "启用硬核模式", 0, SETTING_HARDCORE);
         }
         if (sChallengeModes->challengeEnabled(SETTING_SEMI_HARDCORE) && !playerSettingEnabled(player, SETTING_HARDCORE) && !playerSettingEnabled(player, SETTING_SEMI_HARDCORE))
         {
-            AddGossipItemFor(player, GOSSIP_ICON_CHAT, "启用半极限模式", 0, SETTING_SEMI_HARDCORE);
+            AddGossipItemFor(player, GOSSIP_ICON_CHAT, "启用半硬核模式", 0, SETTING_SEMI_HARDCORE);
         }
         if (sChallengeModes->challengeEnabled(SETTING_SELF_CRAFTED) && !playerSettingEnabled(player, SETTING_SELF_CRAFTED) && !playerSettingEnabled(player, SETTING_IRON_MAN))
         {

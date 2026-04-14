@@ -24,7 +24,7 @@ ChallengeModes.Enable = 1
 #        SlowXpGain（缓慢模式） - 玩家获得 0.5 倍正常数量的 XP。
 #        VerySlowXpGain（极慢模式） - 玩家获得 0.25 倍正常数量的 XP。
 #        QuestXpOnly（任务模式） - 玩家只能从任务中获得 XP
-#        IronManMode（钢铁侠模式-） - Enforces the Iron Man ruleset (https://wowchallenges.com/challangeinfo/iron-man/)
+#        IronManMode（铁人模式-） - 铁人规则 (https://wowchallenges.com/challangeinfo/iron-man/)
 #
 #
 #    每种模式的选项都遵循相同的格式。 "<Challenge>" 替换为挑战的名称，例如 Hardcore. 有以下选项:
